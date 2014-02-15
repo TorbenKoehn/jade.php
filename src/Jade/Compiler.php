@@ -678,7 +678,7 @@ class Compiler
             }
 
             //TODO: assign nulls to all varargs for remove php warnings
-            array_unshift($arguments, 'attributes');
+            array_unshift($arguments, '$attributes');
             $code = $this->createCode("function {$name} (%s) {", implode(',',$arguments));
 
             $this->buffer($code);
